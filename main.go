@@ -46,7 +46,7 @@ func main(){
     }
 
     for i := 1; i < 255; i++ {
-        ip := fmt.Sprintf("%s%d", subnet, i)
+        ip := fmt.Sprintf("%s.%d", subnet, i)
         wg.Add(1)
         go pingDevice(ip, &wg)
     }
